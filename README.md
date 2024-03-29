@@ -1,7 +1,9 @@
 API: https://fakestoreapi.com/products
 
 pada web itu rootnya ada di login.html dan kita bisa login dengan akun ini:
+
 Email: fajrifarid@gmail.com
+
 Password: hello123
 
 
