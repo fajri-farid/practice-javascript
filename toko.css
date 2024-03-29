@@ -119,6 +119,8 @@ input:focus {
 }
 
 #container {
+  padding-left: 3rem;
+  padding-right: 3rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 16px;
@@ -279,6 +281,11 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  #container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   h3 {
     font-size: 0.6rem;
   }
