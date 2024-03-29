@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="toko.css" />
+    <script
+      src="https://kit.fontawesome.com/de991fd127.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1><a href="toko.html">Jry Shop</a></h1>
+      <div class="dropdown">
+        <button onclick="toggleDropdown(event)" class="dropbtn">
+          Categories
+          <i class="fa-solid fa-caret-down" style="color: #ffffff"></i>
+        </button>
+        <div id="categoryDropdown" class="dropdown-content">
+          <a href="#" onclick="getProductsByCategory('men\'s clothing')"
+            >Men's Clothing</a
+          >
+          <a href="#" onclick="getProductsByCategory('women\'s clothing')"
+            >Women's Clothing</a
+          >
+          <a href="#" onclick="getProductsByCategory('jewelery')">Jewelry</a>
+          <a href="#" onclick="getProductsByCategory('electronics')"
+            >Electronics</a
+          >
+        </div>
+      </div>
+      <input type="text" placeholder="cari apa nih?" id="input" />
+      <div class="kanan">
+        <i class="fa-solid fa-cart-shopping" style="color: #ffffff"></i>
+        <p>I</p>
+        <a href="login.html"> <button id="button1">Log Out</button></a>
+      </div>
+    </div>
+    <div id="container"></div>
+    <div id="notfound"></div>
+
+    <script src="toko.js"></script>
+  </body>
+</html>
