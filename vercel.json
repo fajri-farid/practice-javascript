@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/", "dest": "/login.html", "status": 302 },
+    { "src": "/toko", "dest": "/toko.html" }
+  ]
+}
