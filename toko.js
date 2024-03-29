@@ -5,8 +5,10 @@ const notFound = document.getElementById("notfound");
 async function getData(url) {
   const response = await fetch(url);
   const data = await response.json();
+  // console semua data dan lengkap
   console.log(data);
 
+  // nge console kategori apa saja yang ada pada json
   const categories = data.map((item) => item.category);
   console.log("Categories: ", categories);
 
@@ -15,20 +17,24 @@ async function getData(url) {
     const cardElement = document.createElement("div");
     cardElement.classList.add("productCard");
 
+    // creating element yang bakal kepake nanti
     const imageElement = document.createElement("img");
     const titleElement = document.createElement("h3");
     const priceElement = document.createElement("h3");
     const buttonElement = document.createElement("button");
 
+    // dibuatin kek bagian gitu, ini gambar akan ke pakai src untuk di tampilkan dan textContent untuk berupa text
     imageElement.src = item.image;
     titleElement.textContent = item.title;
     priceElement.textContent = `$${item.price}`;
     buttonElement.textContent = "buy";
 
+    // ketika di klik buy ada alertnya
     buttonElement.addEventListener("click", function () {
       alert(`${item.title} seharga $${item.price} telah masuk ke keranjang`);
     });
 
+    // pemanggilan ke webnya
     cardElement.append(imageElement, titleElement, priceElement, buttonElement);
     container.append(cardElement);
   });
@@ -54,19 +60,19 @@ searchInput.addEventListener("change", async () => {
     const imageNotFound = document.createElement("img");
     const textNotFound = document.createElement("h3");
 
-    const filteredData = data.filter((item) => {
-      return item.title.toLowerCase().includes(searchValue); // membuat inputan jadi huruf kecil semua
-    });
-
-    const notFoundElement = document.getElementById("notfound");
+    // const notFoundElement = document.getElementById("notfound");
 
     imageNotFound.src = "assets/notfound.png";
     textNotFound.textContent = "Not Found!";
 
     cardElement1.append(imageNotFound, textNotFound);
-    notFound.innerHTML = "";
+    notFound.innerHTML = ""; // menghapus semua content html kecuali yang akan ditampilkan (not found)
     notFound.append(cardElement1);
   } else {
+    const filteredData = data.filter((item) => {
+      return item.title.toLowerCase().includes(searchValue); // membuat inputan jadi huruf kecil semua
+    });
+
     filteredData.forEach((item) => {
       const cardElement = document.createElement("div");
       cardElement.classList.add("productCard");
@@ -96,9 +102,6 @@ searchInput.addEventListener("change", async () => {
   }
 });
 
-// const productContainer = document.getElementById("productContainer");
-// const categoryDropdown = document.getElementById("categoryDropdown");
-
 // bagian dropdown pada category
 function toggleDropdown(event) {
   event.stopPropagation();
@@ -112,6 +115,7 @@ async function getProductsByCategory(category) {
   );
   const data = await response.json();
 
+  // ngekosongi
   container.innerHTML = "";
   notFound.innerHTML = "";
 
