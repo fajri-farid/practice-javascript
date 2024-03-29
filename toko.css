@@ -330,10 +330,15 @@ footer {
   input {
     background-color: transparent;
     font-size: 15px;
-    margin: 0 15px;
-    padding: 10px 8px;
+    margin: 0 0;
+    padding: 12px 10px;
     border-radius: 50px;
-    width: 50%;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  input::placeholder {
+    font-size: 0.6rem;
   }
 
   .dropdown i {
@@ -349,5 +354,9 @@ footer {
   .dropdown-content a {
     padding: 15px 20px;
     font-size: 0.6rem;
+  }
+
+  .kanan a {
+    width: auto;
   }
 }
