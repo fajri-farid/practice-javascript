@@ -208,10 +208,11 @@ footer {
   height: 20px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) and (min-width: 500px) {
   h3 {
     font-size: 15px;
   }
+
   button {
     font-size: 10px;
     margin-top: 0;
@@ -274,5 +275,79 @@ footer {
 
   .dropdown-content a {
     padding: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h3 {
+    font-size: 0.6rem;
+  }
+
+  button {
+    font-size: 0.5rem;
+    margin-top: 0;
+    width: 40px;
+    height: 20px;
+  }
+
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-height: 20vh;
+  }
+
+  .navbar {
+    height: 60px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  .navbar h1 a {
+    font-size: 0.7rem;
+    width: 3rem;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar p {
+    display: none;
+  }
+
+  .kanan i {
+    display: none;
+  }
+
+  #logout {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    width: 6rem;
+    font-size: 0.8rem;
+  }
+
+  input {
+    background-color: transparent;
+    font-size: 15px;
+    margin: 0 15px;
+    padding: 10px 8px;
+    border-radius: 50px;
+    width: 50%;
+  }
+
+  .dropdown i {
+    margin-left: 10px;
+  }
+
+  .dropbtn {
+    padding: 10px;
+    margin-right: 50px;
+    font-size: 0.7rem;
+  }
+
+  .dropdown-content a {
+    padding: 15px 20px;
+    font-size: 0.6rem;
   }
 }
