@@ -96,9 +96,10 @@ searchInput.addEventListener("change", async () => {
   }
 });
 
-const productContainer = document.getElementById("productContainer");
-const categoryDropdown = document.getElementById("categoryDropdown");
+// const productContainer = document.getElementById("productContainer");
+// const categoryDropdown = document.getElementById("categoryDropdown");
 
+// bagian dropdown pada category
 function toggleDropdown(event) {
   event.stopPropagation();
   categoryDropdown.classList.toggle("show");

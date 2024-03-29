@@ -6,7 +6,7 @@ const signInButton = document.querySelector('button[type="submit"]');
 
 // Menambahkan event listener untuk tombol sign in
 signInButton.addEventListener("click", async function (event) {
-  event.preventDefault(); // Menghentikan aksi bawaan dari tombol submit
+  // event.preventDefault(); // Menghentikan aksi bawaan dari tombol submit, pengiriman langsung
 
   const email = emailInput.value;
   const password = passwordInput.value;
